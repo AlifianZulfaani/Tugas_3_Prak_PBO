@@ -106,13 +106,13 @@ class GUI extends JFrame implements ActionListener{
                 Balok hitungB = new Balok(persegiPanjang.getPanjang(),persegiPanjang.getLebar(),balok.getTinggi());
                 
                 tulisLuas.setText("Luas Persegi Panjang : ");
+                hasilLuas.setText(String.format(" %.1f",hitungPP.hitungLuas()));
                 tulisKeliling.setText("Keliling Persegi Panjang : ");
+                hasilKeliling.setText(String.format(" %.1f",hitungPP.hitungKeliling()));
                 tulisVolume.setText("Volume Balok : ");
+                hasilVolume.setText(String.format(" %.1f",hitungB.hitungVolume()));
                 tulisLuasP.setText("Luas Permukaan Balok : ");
-                hasilLuas.setText(String.format(" %.2f",hitungPP.hitungLuas()));
-                hasilKeliling.setText(String.format(" %.2f",hitungPP.hitungKeliling()));
-                hasilVolume.setText(String.format(" %.2f",hitungB.hitungVolume()));
-                hasilLuasP.setText(String.format(" %.2f",hitungB.hitungLuasPermukaan())); 
+                hasilLuasP.setText(String.format(" %.1f",hitungB.hitungLuasPermukaan())); 
             }
             catch(NullPointerException error){
                 showMessageDialog(null,error.getMessage());
